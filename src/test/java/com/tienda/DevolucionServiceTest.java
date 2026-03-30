@@ -12,13 +12,13 @@ public class DevolucionServiceTest {
     DevolucionService service = new DevolucionService();
 
     @Test
-    void testCodigoDevolucionInvalido() {
+    void testCodigoProductoInvalido() {
         String res = service.registrarDevoluciones(
-                "1234","ABC123","Jose",
+                "D1234","ABC12","Jose",
                 "Producto fallado",
                 LocalDate.now().minusDays(1),
                 LocalDate.now());
 
-        assertEquals("Ingrese un código de devolución válido", res);
+        assertEquals("Ingrese un código de producto válido", res);
     }
 }
